@@ -5,7 +5,6 @@ import { Cc } from "./cc.class";
 import { Cp } from "./cp.class";
 import { Accounts } from "./accounts.interface";
 import { Client } from "../client/cliente.class";
-import { parse } from "path";
 
 export const accountsRouter = express.Router()
 
