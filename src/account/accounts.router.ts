@@ -125,9 +125,9 @@ accountsRouter.post("/withdraw/:id",async (req: Request, res: Response) => {
     }
 })
 
-accountsRouter.post("/transfer" , async (req: Request, res: Response) => {
+accountsRouter.post("/transfer/:id" , async (req: Request, res: Response) => {
     try {
-        const id_donator:number = parseInt(req.body.id_donator, 10)
+        const id_donator:number = parseInt(req.params.id, 10)
         const id_receiver:number = parseInt(req.body.id_receiver, 10)
         
         const account_donator: Account = await AccountService.find(id_donator)

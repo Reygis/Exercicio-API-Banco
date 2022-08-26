@@ -143,9 +143,9 @@ exports.accountsRouter.post("/withdraw/:id", (req, res) => __awaiter(void 0, voi
         return res.status(500).send(error.message);
     }
 }));
-exports.accountsRouter.post("/transfer", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+exports.accountsRouter.post("/transfer/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
-        const id_donator = parseInt(req.body.id_donator, 10);
+        const id_donator = parseInt(req.params.id, 10);
         const id_receiver = parseInt(req.body.id_receiver, 10);
         const account_donator = yield AccountService.find(id_donator);
         const account_receiver = yield AccountService.find(id_receiver);

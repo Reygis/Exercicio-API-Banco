@@ -61,6 +61,7 @@ const transfer = (id_donator, id_receiver, value) => __awaiter(void 0, void 0, v
     const accountReceiver = yield (0, exports.find)(id_receiver);
     if (!accountDonator && !accountReceiver && accountDonator == accountReceiver)
         return null;
-    return (accountDonator.withdraw(value), accountReceiver.deposit(value));
+    return (accountDonator.withdraw(value),
+        accountReceiver.deposit(value));
 });
 exports.transfer = transfer;

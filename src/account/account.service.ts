@@ -54,5 +54,8 @@ export const transfer = async (id_donator:number, id_receiver:number, value:numb
 
     if(!accountDonator && !accountReceiver && accountDonator == accountReceiver) return null;
     
-    return(accountDonator.withdraw(value), accountReceiver.deposit(value))
+    return(
+        accountDonator.withdraw(value), 
+        accountReceiver.deposit(value)
+        );
 }
